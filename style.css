@@ -1,0 +1,147 @@
+:root{
+    --clr-white: hsl(0, 0%, 98%);
+    --clr-gray: hsl(0, 0%, 41%);
+    --clr-black: hsl(0, 0%, 8%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+    transition-duration: 0.25s;
+    color: var(--clr-black)
+}
+
+body{
+    min-height: 100svh;
+    background-color: var(--clr-white);
+}
+
+/* ===================== Header ====================== */
+
+/* --------------------- Navbar ---------------------- */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.hamburger-menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.menu__box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transform: translateX(-35%);
+}
+
+.btn__login-register {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+#menu__toggle {
+    display: none;
+}
+
+/* Menu hamburger */
+
+@media screen and (max-width: 600px) {
+    #menu__toggle {
+        opacity: 0;
+        position: absolute;
+        z-index: -999;
+    }
+    
+    #menu__toggle:checked + .menu__btn > span {
+        transform: rotate(45deg);
+    }
+    
+    #menu__toggle:checked + .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0deg);
+    }
+    
+    #menu__toggle:checked + .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    
+    #menu__toggle:checked ~ .menu__box {
+        right: 0 !important;
+    } 
+    
+    .menu__btn {
+        position: fixed;
+        top: 25px;
+        left: 330px;
+        width: 30px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: var(--clr-black);
+    }
+    
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
+    }
+    
+    .menu__box {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 320px;
+        height: 100%;
+        margin: 0;
+        padding: 40px 0;
+        background-color: black;
+    }
+    
+    .menu__item{
+        display: block;
+        padding: 12px 24px;
+        color: var(--clr-gray);
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .btn__login-register{
+        display: none;
+    }
+
+}
