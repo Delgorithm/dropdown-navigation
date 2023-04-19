@@ -23,8 +23,12 @@ body{
 }
 
 ul > li > a:hover,
-ul > li > a > span:hover{
+ul > li > a:active{
     font-weight: 700;
+}
+
+a {
+    color: var(--clr-gray);
 }
 
 img{
@@ -60,8 +64,14 @@ img{
     gap: 1rem;
 }
 
-ul > li > a > span {
+.menu__item{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
 
+.menu__item img{
+    object-fit: contain;
 }
 
 .btn__login-register {
@@ -86,6 +96,40 @@ ul > li > a > span {
     display: none;
 }
 
+.menu__box-dropdown-features {
+    display: none;
+    transform: translate(45px, -40px);
+}
+
+.menu__box-dropdown-features a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.menu__box-dropdown-features img {
+    object-fit: contain;
+}
+
+.menu__box-dropdown-company {
+    display: none;
+    flex-direction: column;
+    transform: translate(45px, -40px);
+}
+
+.menu__box-dropdown-company a {
+    display: none;
+    margin-top: 0.5rem;
+}
+
+
+.menu__box-dropdown-features a:hover,
+.menu__box-dropdown-features a:hover,
+.menu__box-dropdown-company a:hover,
+.menu__box-dropdown-company a:active {
+    font-weight: 700;
+}
 /* =================== Section : Text - Img ==================== */
 
 
@@ -256,6 +300,15 @@ ul > li > a > span {
 
     .menu__item img{
         object-fit: contain;
+    }
+
+    .menu__box-dropdown-features,
+    .menu__box-dropdown-company {
+        display: none;
+    }
+
+    .menu__box-dropdown-company {
+        display: flex;
     }
 
     .btn__login-register {
