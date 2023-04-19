@@ -238,11 +238,6 @@ ul > li > a > span {
         transition-duration: 0.25s;
     }
 
-    .menu__box span {
-        position: relative;
-        left: 20px;
-    }
-    
     .menu__item,
     .btn__login-register{
         display: block;
@@ -253,19 +248,16 @@ ul > li > a > span {
         width: fit-content;
     }
 
-    ul > li:nth-child(1) > a > span{
-        position: fixed;
-        transform: rotate(270deg);
-        left: 120px;
-        top: 50px;
+    .menu__item{
+        display: flex;
+        justify-content: space-around;
+        gap: 1rem;
     }
 
-    ul > li:nth-child(2) > a > span{
-        position: fixed;
-        transform: rotate(270deg);
-        left: 120px;
-        top: 100px;
+    .menu__item img{
+        object-fit: contain;
     }
+
     .btn__login-register {
         display: flex;
         flex-direction: column;
