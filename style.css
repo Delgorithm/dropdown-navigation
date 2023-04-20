@@ -74,12 +74,6 @@ img{
     object-fit: contain;
 }
 
-.btn__login-register {
-    display: flex;
-    justify-content: flex-end;
-    gap: 1rem;
-}
-
 .btn__login-register button {
     color: var(--clr-gray);
     background-color: var(--clr-white);
@@ -113,7 +107,7 @@ img{
 }
 
 .menu__box-dropdown-company {
-    display: none;
+    opacity: 0;
     flex-direction: column;
     transform: translate(45px, -40px);
 }
@@ -178,10 +172,13 @@ img{
     cursor: pointer;
 }
 
-.btn__learn-more:hover,
-.btn__learn-more:active
-{
+.btn__learn-more:hover{
     background-color: var(--clr-gray);
+}
+
+.btn__learn-more:active{
+    background-color: var(--clr-white);
+    color: var(--clr-black);
 }
 
 /* ===================== Footer ====================== */
@@ -199,7 +196,7 @@ img{
 
 /* ===================== Media queries ====================== */
 
-/* --------------------- iPad : 768x1024 ---------------------- */
+/* --------------------- 600px ---------------------- */
 
 
 @media screen and (max-width: 600px) {
@@ -321,4 +318,64 @@ img{
 
 }
 
-/* --------------------- MacBook Pro : 1440x900 ---------------------- */
+/* --------------------- 1200px ---------------------- */
+
+@media screen and (min-width: 1200px) {
+
+    .menu__box li {
+        transform: translateX(-650px);
+    }
+
+    .text-img{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "text-img__text text-img__background";
+    }
+
+    .text-img__text {
+        grid-area: text-img__text;
+    }
+
+    .text-img__background {
+        grid-area: text-img__background;
+    }
+
+    .text-img__background img {
+        object-fit: contain;
+        height: 45vw;
+        margin-top: 3rem;
+    }
+
+    .text-img__text {
+        position: relative;
+        display: grid;
+        place-content: center;
+        width: 100%;
+        padding: 0rem 9rem 0rem 9rem;
+    }
+
+    .text-img__text h1 {
+        font-size: 3.5em;
+    }
+
+    .text-img__text p {
+        font-size: 0.9em;
+        margin: 0;
+        text-align: left;
+        margin: 3rem 0;
+    } 
+
+    .btn__learn-more {
+        position: relative;
+        transform: translate(-116px, 10px);
+        width: 10em;
+        border-radius: 1vmax;
+    }
+
+    .footer-img {
+        transform: translateY(100px);
+    }
+
+
+
+}
