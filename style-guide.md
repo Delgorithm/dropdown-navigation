@@ -25,3 +25,10 @@ The designs were created to the following widths:
 
 - Family: [Epilogue](https://fonts.google.com/specimen/Epilogue)
 - Weights: 500, 700
+
+## Next steps
+
+- Make it truly responsive : 100%
+- CSS : Use "clamp()", "min/max"
+- Add some variety and unique style
+- Make it my own
